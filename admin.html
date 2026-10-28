@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Gallery/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+<body>
+     <header>
+        <img src="Gallery/logo.webp" alt="My Buddies Pizza Logo" class="logo">
+        <img src="Gallery/list.png  " alt="Open Menu" class="menu-icon" onclick="openNav()" style="cursor:pointer; height:40px; width:40px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="/login.html">Login In</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <!-- <li><a href="#specials">Specials</a></li> -->
+                <li><a href="/gallery.html">Photos</a></li>
+                <li><a href="/reservations.html">Party Packages</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="login-container" class="subform">
+        <h1>Admin Login</h1>
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input class="inputTxt" type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input class="inputTxt" type="password" id="password" name="password" required>
+
+            <input class="submitSub" type="submit" value="Login">
+        </form>
+        <p id="login-error" class="res-warn hidden" style="color: red; text-align: center; padding-top: 10px;">Invalid username or password.</p>
+    </div>
+
+    <div id="admin-content" class="container hidden">
+        <h1 id="welcome-heading" class="text-center">Welcome, Admin</h1>
+        <!-- Reservation Calendar Section -->
+         <div class="subform">
+            <h2>Party Schedule Calendar</h2>
+            <p>This calendar shows all the party reservations that have been successfully submitted.</p>
+            <div class="calendar-container">
+                <!-- PASTE YOUR GOOGLE CALENDAR EMBED CODE FROM STEP 1 HERE -->
+                <iframe src="https://calendar.google.com/calendar/embed?src=299b91427831a68a2338f33f62c2ec6966f5b6195720dc27f4bcb13f1a6e8e39%40group.calendar.google.com&ctz=America%2FLos_Angeles&mode=WEEK" style="border: 0" frameborder="0" scrolling="no"></iframe>            </div>
+        </div>
+        <!-- Customer Response Messages Section -->
+        <div class="subform">
+            <h2>Customer Response Messages</h2>
+            <div id="customer-messages" class="customer-messages-section">
+                <div class="contacts-pane">
+                    <h3 class="front-bold text-center">Contacts</h3>
+                    <ul id="customer-contact-list" class="contact-list">
+                        <!-- Contacts will be dynamically populated here -->
+                        <li id="loading-contacts-msg">Loading contacts...</li>
+                    </ul>
+                </div>
+                <div class="chat-window">
+                    <h3 class="front-bold text-center" id="customer-chat-header">Select a conversation</h3>
+                    <p id="customer-chat-info" class="chat-info-subtext"></p>
+                    <div id="customer-chat-display" class="chat-messages-display">
+                        <!-- Chat messages will be dynamically populated here -->
+                        <p class="chat-placeholder">Select a conversation from the left to view messages.</p>
+                    </div>
+
+                    <div class="chat-input-container">
+                        <textarea id="customer-message-input" placeholder="Type your reply here..." rows="3" class="form-group" disabled></textarea>
+                        <button id="send-customer-message-btn" class="btn-primary" style="width: auto;" disabled>Send Reply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Admin Direct Messages Section -->
+        <div class="subform">
+            <h2>Admin Direct Messages</h2>
+            <div id="admin-messages" class="admin-messages-section">
+                <div class="contacts-pane">
+                    <h3 class="front-bold text-center">Contacts</h3>
+                    <ul id="contactList" class="contact-list">
+                        <!-- Contacts will be dynamically populated here -->
+                        <li id="loadingContact" class="loading-contact">Loading contacts...</li>
+                        <li id="noContacts" class="no-contacts hidden">No contacts available</li>
+                    </ul>
+                </div>
+                <div class="chat-window">
+                    <h3 class="front-bold text-center" id="chat-header">Select an manager to message!</h3>
+                    <div id="chatMessagesdisplay" class="chat-messages-display">
+                        <!-- Chat messages will be dynamically populated here -->
+                        <p class="chat-place" id="chat-placeholder">Select an manager from the left to start chatting.</p>
+                    </div>
+
+                    <div class="chat-input-container">
+                        <textarea id="admin-message-Input" placeholder="Type your message here..." rows="3" class="form-group" disabled></textarea>
+                        <button id="sendadminMessageBtn" class="btn-primary" style="width: auto;" disabled>Send</button>
+                    </div>
+                    <div id="admin-message-status" class="message-status hidden"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Submissions/Confirmations Section -->
+        <div id="submissions-container" class="subform">
+            <h1>Reservation Confirmations</h1>
+            <div id="submissions-list"></div>
+        </div>
+    </div>
+
+    <div id="logout-container" class="hidden">
+        <button id="logout-btn" class="submitSub" style="width: 100px;">Logout</button>
+    </div>
+
+
+<script src="app.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

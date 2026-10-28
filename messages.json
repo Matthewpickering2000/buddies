@@ -1,0 +1,26 @@
+[
+  {
+    "threadId": "thread_1754941486108",
+    "email": "matthewpickering2000@gmail.com",
+    "subject": "test 1\n",
+    "name": "Matthew Pickering",
+    "lastUpdate": "2025-08-11T19:47:22.781Z",
+    "messages": [
+      {
+        "from": "customer",
+        "text": "test 1\n",
+        "timestamp": "2025-08-11T19:44:46.108Z"
+      },
+      {
+        "from": "customer",
+        "text": "test 1\n",
+        "timestamp": "2025-08-11T19:46:42.910Z"
+      },
+      {
+        "from": "admin",
+        "text": "test 2",
+        "timestamp": "2025-08-11T19:47:22.781Z"
+      }
+    ]
+  }
+]

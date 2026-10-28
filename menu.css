@@ -1,0 +1,156 @@
+button{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* General Menu Layout */
+.menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.col {
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 350px;
+    margin: 15px;
+    display: none; /* Initially hidden for filtering */
+}
+
+.col.show {
+    display: block; /* Shown by JS filter */
+}
+
+/* --- Menu Card Styling --- */
+.menu-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Make cards in the same row equal height */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.menu-item img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    
+}
+
+.menu-item h3 {
+    font-size: 1.75em;
+    color: #2c2c2c;
+    margin: 15px 0;
+}
+.package-label{
+    font-size: .75em;
+    ;
+}
+select{
+    width: 100px;
+    border: none;
+    background: none;
+}
+/* --- Size Selection Styling --- */
+.sizes {
+    display: flex;
+    flex-wrap: nowrap; /* This forces the buttons to stay on one line */
+    justify-content: center;
+    gap: 6px; /* A smaller gap between buttons */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Hide the actual radio button */
+.sizes input[type="radio"] {
+    display: none;
+}
+
+.sizes label {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 8px 2px; /* Less horizontal padding */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 45px;  /* Give each button a fixed width */
+    height: 85px; /* Give each button a fixed height */
+    text-align: center;
+    z-index: 0; /* Ensure labels are above other elements */
+}
+
+.sizes label:hover {
+    background-color: #e0e0e0;
+    border-color: #b0b0b0;
+}
+
+.sizeImg {
+    height: 30px;
+    width: 30px;
+    object-fit: contain; /* Ensures image scales nicely without stretching */
+    margin-bottom: 4px; /* Adjusted for slightly larger image */
+}
+
+.size-details {
+    line-height: 1.2;
+}
+
+.sizes .size-name {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.85em;
+}
+
+.sizes .size-price {
+    display: block;
+    font-size: 0.8em;
+    color: #666;
+}
+/* Style for the selected size label */
+.sizes input[type="radio"]:checked + label {
+    background-color: #d43d1a; /* A reddish color, like pizza sauce */
+    border-color: #a02d12;
+}
+
+.sizes input[type="radio"]:checked + label .size-name,
+.sizes input[type="radio"]:checked + label .size-price {
+    color: #fff;
+}
+
+/* --- Order Button Styling --- */
+.order-btn {
+    background-color: #4CAF50; /* A nice green */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: auto; /* Pushes button to the bottom of the card */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.order-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}

@@ -1,0 +1,7 @@
+# Dependencies
+node_modules/
+
+# Secrets and environment variables
+google-credentials.json
+.env
+users.json

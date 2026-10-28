@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Gallery/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <header>
+        <img src="Gallery/logo.webp" alt="My Buddies Pizza Logo" class="logo">
+        <img src="Gallery/list.png  " alt="Open Menu" class="menu-icon" onclick="openNav()" style="cursor:pointer; height:40px; width:40px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <!-- <li><a href="#specials">Specials</a></li> -->
+                <li><a href="/gallery.html">Photos</a></li>
+                <li><a href="/reservations.html">Party Packages</a></li>
+            </ul>
+        </div>
+    </header>
+
+<hero>
+        <img src="Gallery/MBP.png" alt="Hero Image" class="hero-image">
+</hero>
+
+ <section class="about">
+        <div class="about-text">
+            <h1>Our Company</h1>
+            <p>Since September of 1991, Bob and Tracy poured their hearts into My Buddies Pizza, building it into a beloved cornerstone of our community. After 30 incredible years, they decided to step back, choosing to pass their cherished legacy to a new ownership group who, like them, fell in love with what My Buddies represents.
+                <br>
+                <br>
+            We're honored to carry forward their commitment to 'making the best pizza around using high-quality ingredients with no skimping.' Our promise to you, our loyal customers, is a seamless transition - maintaining the delicious flavors and friendly atmosphere you've always known and appreciated. We're truly eager to greet both our long-time patrons and welcome new faces, building lasting relationships not just between our team and the community, but with each of you who walks through our doors.
+                <br>
+                <br>
+            You can still count on us for delivery within approximately 10-12 miles of our shop. Just as Bob and Tracy did, we firmly believe in supporting our community through a variety of avenues, including numerous fundraisers and local contributions. My Buddies continues to be a family-run, Christian-based restaurant, dedicated to providing a fun, welcoming, and family-friendly environment. We truly look forward to continuing to serve you and hope every visit brings you joy.</p>
+    </section>
+
+<section class="hoursOps">
+            <h2>Location <br>&<br> Hours of Operation</h2>
+
+            <p>Conviently located at <a href="#" class="maplink" id="dynamicMapLink" style="text-decoration: underline;color: #a31515;">2503 E Lakeshore Dr STE A, Lake Elsinore, CA 92530</a></p>
+            <ul class="hours">
+                <!-- <li class="short">Sun-Thurs: 11:00 AM - 8:00 PM</li>
+                <li class="short">Fri-Sat: 11:00 AM - 10:00 PM</li> -->
+            <!-- <br>   -->
+                <li>Monday: 11:00 AM - 8:00 PM</li>
+                <li>Tuesday: 11:00 AM - 8:00 PM</li>
+                <li>Wednesday: 11:00 AM - 8:00 PM</li>
+                <li>Thursday: 11:00 AM - 8:00 PM</li>
+                <li>Friday: 11:00 AM - 10:00 PM</li>
+                <li>Saturday: 11:00 AM - 10:00 PM</li>
+                <li>Sunday: 11:00 AM - 8:00 PM</li>
+            </ul>
+            
+            <h1>Get in touch</h1>
+            <p>Have questions or want leave a review for managment? Give us a call or fill out the form below and we'll get back to you! Need a quicker response? Call now and speak with someone on our friendly staff!</p>
+            <button class="contactBtn" onclick="window.location.href='tel:+19516746946'" style="background-color: #a31515; color: white"><img src="Gallery/phone.png" alt="Phone Icon" style="height: 20px;padding-right: 10px;">(951) 674-6946</button>
+            <div class="container">
+                <form class="subform" id="contact-form" action="action_page.php">
+                
+                  <label for="fname">First Name</label>
+                  <input class="inputTxt" type="text" id="fname"   name="firstname" placeholder="First Name ">
+                
+                  <label for="lname">Last Name</label>
+                  <input class="inputTxt" type="text" id="lname"   name="lastname" placeholder="Last Name">
+                
+                  <label for="email">Email</label>
+                  <input class="inputTxt" type="text" id="email"   name="email" placeholder="mail@email.com">
+                
+                  <label for="subject">Subject</label>
+                  <textarea class="subTxt"id="subject" name="subject"   placeholder="Let us know your thoughts..."   style="height:200px"></textarea>
+                
+                  <input class="submitSub" type="submit" value="Submit">
+                
+                </form>
+            </div>
+</section>
+</main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/MyBuddiesPizza/#" target="_blank">
+                <img src="Gallery/facebook.png" class="social-icon" alt="Facebook Icon">
+                <!-- Icon by Freepik -->
+
+            </a>
+            <a href="https://www.instagram.com/mybuddiespizza" target="_blank">
+                <img src="Gallery/instagram.png" class="social-icon" alt="Instagram Icon">
+                <!-- Icon by Freepik -->
+            </a>
+            <a href="https://www.x.com/mbpizza1" target="_blank">
+                <img src="Gallery/twitter.png"class="social-icon" alt="Twitter Icon">
+                <!-- Icon by Freepik -->
+            </a>
+            <a href="https://www.yelp.com/biz/my-buddies-pizza-lake-elsinore?osq=my+buddies+pizza" target="_blank">
+                <img src="Gallery/yelp.png" class="social-icon" alt="Yelp Icon">
+                <!-- Icon by Freepik -->
+            </a>
+        </div>
+        <br>
+        <p>&copy; 2023 My Buddies Pizza. All rights reserved.</p>
+        <p>Website redesigned by Matthew Pickering</p>
+    </footer>
+<script src="app.js"></script>
+</body>
+</html>

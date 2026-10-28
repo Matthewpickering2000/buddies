@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Gallery/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+     <header>
+        <img src="Gallery/logo.webp" alt="My Buddies Pizza Logo" class="logo">
+        <img src="Gallery/list.png  " alt="Open Menu" class="menu-icon" onclick="openNav()" style="cursor:pointer; height:40px; width:40px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="/login.html">Login In</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <!-- <li><a href="#specials">Specials</a></li> -->
+                <li><a href="/gallery.html">Photos</a></li>
+                <li><a href="/reservations.html">Party Packages</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="login-container">
+    <h2>Login</h2>
+<form action="action_page.php" method="post">
+  <div class="container">
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw"><a href="#">Forgot password?</a></span>
+  </div>
+</form>
+</div>
+</body>
+</html>

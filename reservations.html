@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Party Reservations - My Buddies Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Gallery/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <header>
+        <img src="Gallery/logo.webp" alt="My Buddies Pizza Logo" class="logo">
+        <img src="Gallery/list.png  " alt="Open Menu" class="menu-icon" onclick="openNav()" style="cursor:pointer; height:40px; width:40px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <!-- <li><a href="#specials">Specials</a></li> -->
+                <li><a href="/gallery.html">Photos</a></li>
+                <li><a href="/reservations.html">Party Packages</a></li>
+            </ul>
+        </div>
+    </header>
+    
+      <h1>Party Room Reservations</h1>
+      <br>
+      <ol class="package-list">
+        <li class="li-Title"><strong>Buddy Package:</strong> $130</li>
+        <ul>
+          <li class="li-list">1 Large 1-Topping Pizza or Cheese Pizza</li>
+          <li class="li-list">10 Fountain Drink Cups</li>
+          <li class="li-list">3 $10 Game Cards for Arcade</li>
+        </ul>
+        <br>
+        <li class="li-Title"><strong>Super Buddy Package:</strong> $250</li>
+        <ul>
+          <li class="li-list">6 Large 1-Topping Pizza or Cheese Pizza</li>
+          <li class="li-list">1 Large Family Salad</li>
+          <li class="li-list">20 Fountain Drink Cups</li>
+          <li class="li-list">3 $10 Game Cards for Arcade</li>
+        </ul>
+        <br>
+        <li class="li-Title"><strong>Team Buddy Package:</strong> $300</li>
+        <ul>
+          <li class="li-list">7 Large 1-Topping Pizza or Cheese Pizza</li>
+          <li class="li-list">10 Fountain Drink Cups</li>
+          <li class="li-list">5 $10 Game Cards for Arcade</li>
+        </ul>
+        <br>
+        <li class="li-Title"><strong>Mega Buddy Package:</strong> $360</li>
+        <ul>
+          <li class="li-list">5 Large 1-Topping Pizza or Cheese Pizza</li>
+          <li class="li-list">1 Xtra Large Family Salad</li>
+          <li class="li-list">16 pcs of Chicken Wings</li>
+          <li class="li-list">1 Order of Spuddy Chips</li>
+          <li class="li-list">1 Family Dinner Salad</li>
+          <li class="li-list">1 Family Specialty Salad</li>
+          <li class="li-list">20 Fountain Drink Cups</li>
+        </ul>
+
+        <br>
+      <h3>My Buddies Party Rules</h3>
+      <ol>
+        <li class="li-list">Reservations must be made at least 24 hours in advance.</li><br>
+        <li class="li-list">All parties require credit card info and a $50 deposit to reserve space. There is a 24-hour grace period to cancel the reservation and refund the deposit.</li><br>
+        <li class="li-list">No outside food or drink of any kind (except for cakes and cupcakes). If bringing a cake, please bring your own serving utensils to serve the cake.</li><br>
+        <li class="li-list">Please help us keep My Buddies clean. Cake fights, food fights, silly string, confetti, and pinatas are not allowed. Excessive mess may be subject to a $50 clean up fee.</li><br>
+        <li class="li-list">Regular time allotted for all parties is 2 hours. If you would like to reserve the room for longer, please <a href="tel:+19516746946" ">contact us directly by phone</a> and request additional time. Additional fees may apply.</li><br>
+        <li class="li-list">Smoking and vaping are not allowed within the building but you are welcome to use our outdoor smoking area.</li><br>
+        <li class="li-list">Parties are limited to a maximum of 2 hours.</li><br>
+        <li class="li-list">Approapriate attire is required at all times. We ask you respect this as we are a family and community oriented restaurant</li><br>
+        <li class="li-list">Please refrain from running and excessive horseplay out of courtesy to our other customers!</li>
+      </ol>
+        
+      <p class="res-warn">If you would like to use our party room, please reserve the space 24 hours in advance. Our party room is used for overflow on busy days, and we cannot promise that the party room will be available if you do not reserve. </p>
+      <br>
+      <h5 class="res-warn">Disclaimer: We do reserver the right to refurse service to any and all indivuals who are not following our resturant policies or for those who are causing excessive disturbances to the other resturant guests.</h5>
+      <br>
+      <br>
+      
+
+<form class="subform" id="reservation-form" action="action_page.php" >
+
+
+      <label for="fname">First Name</label>
+      <input class="inputTxt" type="text" id="fname"   name="firstname" placeholder="First Name ">
+
+      <label for="lname">Last Name</label>
+      <input class="inputTxt" type="text" id="lname"   name="lastname" placeholder="Last Name">
+
+      <label for="email">Email</label>
+      <input class="inputTxt" type="text" id="email"   name="email" placeholder="mail@email.com">
+
+      <label for="phone">Phone Number</label>
+      <input class="inputTxt" type="text" id="phone"   name="phone" placeholder="(123) 456-7890">
+
+      <label for="amtppl">Number of People</label>
+      <input class="inputTxt" type="number" id="amtppl"   name="amtppl" placeholder="1">
+
+      <label for="group">Group Name</label>
+      <input class="inputTxt" type="text" id="group"   name="group" placeholder="Group Name">
+      
+      <label for="date">Date of Party</label>
+      <input class="inputTxt" type="date" id="date"   name="date" placeholder="Date of Party">
+      
+      <label for="time">Time of Party</label>
+      <div class="time-picker-container">
+        <input class="inputTxt" type="text" id="time-display" placeholder="Please select a date first" readonly disabled>
+        <input type="hidden" id="time" name="time">
+        <div id="time-picker-dropdown" class="time-picker-dropdown"></div>
+      </div>
+      <fieldset class="packages-fieldset">
+    <legend>Party Packages</legend>
+    <div class="package-item">
+        <input type="checkbox" id="package0" name="packages[]" value="basic">
+        <label for="package0" class="package-label">Order From Menu Day Of</label>
+    </div>
+
+    <div class="package-item">
+        <input type="checkbox" id="package1" name="packages[]" value="buddy">
+        <label for="package1" class="package-label">The Buddy Package: $130</label>
+        <label for="qty1" class="sr-only">Quantity</label>
+        <input type="number" id="qty1" name="qty_buddy" class="package-qty" min="0" value="0" disabled>
+        <div class="dynamic-order" id="buddy-package"></div>
+    </div>
+
+    <div class="package-item">
+        <input type="checkbox" id="package2" name="packages[]" value="super_buddy">
+        <label for="package2" class="package-label">The Supper Buddy Package: $250</label>
+        <label for="qty2" class="sr-only">Quantity</label>
+        <input type="number" id="qty2" name="qty_super_buddy" class="package-qty" min="0" value="0" disabled>
+        <div class="dynamic-order" id="super-buddy-package"></div>
+    </div>
+
+    <div class="package-item">
+        <input type="checkbox" id="package3" name="packages[]" value="team_buddy">
+        <label for="package3" class="package-label">The Team Buddy Package: $300</label>
+        <label for="qty3" class="sr-only">Quantity</label>
+        <input type="number" id="qty3" name="qty_team_buddy" class="package-qty" min="0" value="0" disabled>
+        <div class="dynamic-order" id="team-buddy-package"></div>
+    </div>
+
+    <div class="package-item">
+        <input type="checkbox" id="package4" name="packages[]" value="mega_buddy">
+        <label for="package4" class="package-label">The Mega Buddy Package: $360</label>
+        <label for="qty4" class="sr-only">Quantity</label>
+        <input type="number" id="qty4" name="qty_mega_buddy" class="package-qty" min="0" value="0" disabled>
+        <div class="dynamic-order" id="mega-buddy-package"></div>
+    </div>
+</fieldset>
+
+
+      
+
+      <label for="tmpcrd">Temporary Card</label>
+      <input class="inputTxt" type="text" id="tmpcrd" name="tmpcrd" placeholder="xxxx-xxxx-xxxx-xxxx">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="expdate">Expiration Date</label>
+          <input class="inputTxt" type="text" id="expdate" name="expdate" placeholder="mm/yy">
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input class="inputTxt" type="text" id="cvv" name="cvv" placeholder="123">
+        </div>
+      </div>
+      <p class="res-warn">Card will only be charged day of event or after we have reached out and confirmed the reservation</p>
+           
+
+      <label for="subject">Additional Information</label>
+      <textarea class="subTxt"id="subject" name="subject"   placeholder="Let us know your thoughts..."   style="height:200px"></textarea>
+
+      <input class="submitSub" type="submit" value="Submit">
+
+    </form>
+    <h6>All prices are only estimates. Our Team will reach out for conformation and submission of any and all orders.</h6>
+
+      <div id="form-output-container" class="subform" style="display: none;">
+          <h3>Form Submission Data (For Testing)</h3>
+          <pre id="form-output">Click the "Submit" button above to see the collected form data here.</pre>
+      </div>
+
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/MyBuddiesPizza/#" target="_blank">
+                <img src="Gallery/facebook.png" class="social-icon" alt="Facebook Icon">
+                <!-- Icon by Freepik -->
+
+            </a>
+            <a href="https://www.instagram.com/mybuddiespizza" target="_blank">
+                <img src="Gallery/instagram.png" class="social-icon" alt="Instagram Icon">
+                <!-- Icon by Freepik -->
+            </a>
+            <a href="https://www.x.com/mbpizza1" target="_blank">
+                <img src="Gallery/twitter.png"class="social-icon" alt="Twitter Icon">
+                <!-- Icon by Freepik -->
+            </a>
+            <a href="https://www.yelp.com/biz/my-buddies-pizza-lake-elsinore?osq=my+buddies+pizza" target="_blank">
+                <img src="Gallery/yelp.png" class="social-icon" alt="Yelp Icon">
+                <!-- Icon by Freepik -->
+            </a>
+        </div>
+        <br>
+        <p>&copy; 2023 My Buddies Pizza. All rights reserved.</p>
+        <p>Website redesigned by Matthew Pickering</p>
+        <p><a href="/admin.html" style="color: white; text-decoration: underline;">Admin Login</a></p>
+    </footer>
+<script src="app.js"></script>
+</body>
+</html>

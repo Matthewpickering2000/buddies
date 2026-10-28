@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Buddies Pizza - Lake Elsinore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Gallery/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <header>
+        <img src="Gallery/logo.webp" alt="My Buddies Pizza Logo" class="logo">
+        <img src="Gallery/list.png  " alt="Open Menu" class="menu-icon" onclick="openNav()" style="cursor:pointer; height:40px; width:40px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <!-- <li><a href="#specials">Specials</a></li> -->
+                <li><a href="/gallery.html">Photos</a></li>
+                <li><a href="/reservations.html">Party Packages</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <hero>
+        <img src="Gallery/Hero.png" alt="Hero Image" class="hero-image">
+    </hero>
+    <main>
+        <section class="welcome">
+            <h1>Welcome to My Buddies Pizza</h1>
+            <p>Whether it’s pasta, pizza, salad, or a round of cold brews you’re craving, we’ll always have your fix, and we’ll serve it up with a smile. Conviently located in the heart of Lake Elsinore on the corner of Lakeshore Drive and Diamond Drive, we’re here to serve you the best pizza in town. We’re open 7 days a week, so come on in on your own or bring you family we have something for everyone one! With our arcade room and prize counter we cater to people of all ages. <a href="#" class="maplink" id="dynamicMapLink" style="text-decoration: underline;color: #a31515;">Don't wait come visit us to today!</a></p> 
+            <!-- <p>Welcome to My Buddies Pizza, where we serve the best pizza in town! Our pizzas are made with fresh ingredients and a lot of love. Whether you're here for a quick bite or a family feast, we have something for everyone.</p> -->
+            <div>
+                <a class="full-menu" href="Gallery/Menu.pdf" target="_blank" title="View Full Menu">
+                    <img src="Gallery/Menu_icon.png" alt="Pizza Icon"
+                    >
+                    <!-- Icon by Freepik -->
+                </a>
+                <a class="order-online" href="/menu.html" target="_self" title="Order Online">
+                    <img src="Gallery/Online_menu_icon.png" alt="Online Icon"
+                    >
+                    <!-- Icon by Freepik -->
+                </a>
+            </div>
+            <p>
+                <!-- <br><a href="tel:+19514567890">Phone: (951) 456-7890</a> -->
+            </p>
+        </section>
+
+        <section class="Awards">
+            <h2>Our Awards</h2>
+                <div 
+                class="awards-container">
+                    <div class="award-item">
+                        <img src="https://cdn6.localdatacdn.com/badges/restaurantji/category/pizza/pizza-6.png" class="award" alt="Award 1">
+                        <div class="award-overlay">
+                            <p>My Buddies Pizza</p>
+                        </div>
+                    </div>
+                    <div class="award-item">
+                        <img src="Gallery/Award24.png" class="award" alt="Award 2">
+                        <div class="award-overlay">
+                            <p>My Buddies Pizza</p>
+                            <hr id="restaurantji_badge_separator"
+                            class="bridge">
+                            <p>Pizza</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="awardtxt">
+                    <div class="review-row">
+                        <img src="https://cdn6.localdatacdn.com/badges/restaurantji/img/review_logo_2.png" class="awardtimg" alt="Award Card">
+                        <img src="Gallery/review_star.png" class="reviewstar" alt="Review Star">
+                    </div>
+                    <p>I'm not a pizza person, but this pizza is bomb!! Also had the hot wings and will definitely have it again! I highly recommend My Buddies Pizza!! New customer and now a forever customer!
+                        <br>
+                        <br>
+                    -Restaurantji
+                    </p>
+                </div>
+                
+        </section>
+
+        <section class="hoursOps">
+            <h2>Hours of Operation</h2>
+            <ul class="hours">
+                <li class="short">Sun-Thurs: 11:00 AM - 8:00 PM</li>
+                <li class="short">Fri-Sat: 11:00 AM - 10:00 PM</li>
+            <!-- <br>   
+                <li>Monday: 11:00 AM - 8:00 PM</li>
+                <li>Tuesday: 11:00 AM - 8:00 PM</li>
+                <li>Wednesday: 11:00 AM - 8:00 PM</li>
+                <li>Thursday: 11:00 AM - 8:00 PM</li>
+                <li>Friday: 11:00 AM - 10:00 PM</li>
+                <li>Saturday: 11:00 AM - 10:00 PM</li>
+                <li>Sunday: 11:00 AM - 8:00 PM</li> -->
+            </ul>
+            <img src="Gallery/Storefront.webp" alt="Storefront Image" class="storefront-image">
+            <h1>Get in touch</h1>
+            <p>Have questions or want to place an order? Give us a call or fill out the form below and we'll get back to you!</p>
+            <div class="container">
+    <form class="subform" id="contact-form" action="action_page.php">
+
+      <label for="fname">First Name</label>
+      <input class="inputTxt" type="text" id="fname"   name="firstname" placeholder="First Name ">
+
+      <label for="lname">Last Name</label>
+      <input class="inputTxt" type="text" id="lname"   name="lastname" placeholder="Last Name">
+
+      <label for="email">Email</label>
+      <input class="inputTxt" type="text" id="email"   name="email" placeholder="mail@email.com">
+
+      <label for="subject">Subject</label>
+      <textarea class="subTxt"id="subject" name="subject"   placeholder="Let us know your thoughts..."   style="height:200px"></textarea>
+
+      <input class="submitSub" type="submit" value="Submit">
+
+    </form>
+</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/MyBuddiesPizza/#" target="_blank">
+                <img src="Gallery/facebook.png" class="social-icon" alt="Facebook Icon">
+                <!-- Icon by Freepik -->
+
+            </a>
+            <a href="https://www.instagram.com/mybuddiespizza" target="_blank">
+                <img src="Gallery/instagram.png" class="social-icon" alt="Instagram Icon">
+                <!-- Icon by Freepik -->
+            </a>
+            <a href="https://www.x.com/mbpizza1" target="_blank">
+                <img src="Gallery/twitter.png"class="social-icon" alt="Twitter Icon">
+                <!-- Icon by Freepik -->
+            </a>
+            <a href="https://www.yelp.com/biz/my-buddies-pizza-lake-elsinore?osq=my+buddies+pizza" target="_blank">
+                <img src="Gallery/yelp.png" class="social-icon" alt="Yelp Icon">
+                <!-- Icon by Freepik -->
+            </a>
+        </div>
+        <br>
+        <p>&copy; 2023 My Buddies Pizza. All rights reserved.</p>
+        <p>Website redesigned by Matthew Pickering</p>
+        <p><a href="/admin.html" style="color: white; text-decoration: underline;">Admin Login</a></p>
+    </footer>
+<script src="app.js"></script>
+</body>
+</html>

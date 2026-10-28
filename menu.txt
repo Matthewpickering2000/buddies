@@ -1,0 +1,489 @@
+Specailty Pizzas:
+
+Best Buddy { 
+Prices: Mini-$12 ,Small-$19 ,Medium-$27 ,Large-$34 ,X-Lrg-$38
+Sauce:Pizza Sauce  ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Pepperoni,
+Bell Pepper,
+Onion,
+Mushroom,
+Tomato,
+Sausage;
+Gormet Toppings:
+
+ ;
+}
+
+BLT Pizza { 
+Prices: Mini-$13 ,Small-$19 ,Medium-$27 ,Large-$34 ,X-Lrg-$38
+Sauce: Ranch ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Bacon,
+Shredded Lettuce,
+Tomato;
+Gormet Toppings:
+
+ ;
+}
+
+Bud-E-Que { 
+Prices: Mini-$15 ,Small-$20 ,Medium-$27 ,Large-$34 ,X-Lrg-$390
+Sauce: Sweet BBQ* default  ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Fresh Garlic,
+Red Onion
+ ;
+Gormet Toppings:
+Chicken,
+ ;
+}
+
+Buddy Del Mar { 
+Prices: Mini-$15 ,Small-$22 ,Medium-$29 ,Large-$35 ,X-Lrg-$40
+Sauce: Garlic Butter ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Fresh Garlic* default can also choose Roasted Garlic instead,
+Red Onion,
+Tomato,
+Cilantro;
+Gormet Toppings:
+Shrimp,
+Blue Cheese Crumbles;
+}
+
+Buffalo Buddy { 
+Prices: Mini-$13 ,Small-$20 ,Medium-$29 ,Large-$35 ,X-Lrg-$40
+Sauce: Ranch ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Cilantro
+ ;
+Gormet Toppings:
+Chicken,
+Blue Cheese Crumbles;
+Buffalo Sauce
+ ;
+}
+
+Butcher Block { 
+Prices: Mini-$16 ,Small-$22 ,Medium-$31 ,Large-$36 ,X-Lrg-$40
+Sauce: Pizza Sauce  ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Pepperoni,
+Ham,
+Salami,
+Meatballs,
+Hamburger,
+Bacon Bits,
+Sausage
+ ;
+Gormet Toppings:
+
+ ;
+}
+
+Chicken Parmesan { 
+Prices: Mini-$15 ,Small-$22 ,Medium-$31 ,Large-$36 ,X-Lrg-$40
+Sauce: Alfredo * default can also choose pesto or pesto alfredo instead ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Fresh Garlic * default can also choose Roasted Garlic instead,
+Red Pepper Flakes,
+Tomato,
+Cilantro,
+Shredded Parmesan;
+Gormet Toppings:
+Chicken,
+Artichokes;
+}
+
+Everything { 
+Prices: Mini-$16 ,Small-$22 ,Medium-$29 ,Large-$35 ,X-Lrg-$40
+Sauce: Pizza Sauce ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Pepperoni,
+Ham,
+Salami,
+Green Pepper,
+Onion,
+Mushroom,
+Black Olives,
+Tomato,
+Bacon Bits,
+Pinapple,
+Sausage
+ ;
+Gormet Toppings:
+Extra Cheese;
+}
+
+Five Cheese { 
+Prices: Mini-$13 ,Small-$19 ,Medium-$26 ,Large-$30 ,X-Lrg-$36
+Sauce: Pizza Sauce ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+
+ ;
+Gormet Toppings:
+Cheddar Cheese,
+Shredded Parmesan,
+Smoaked Mozzerella,
+Blue Cheese Crumbles ;
+}
+
+Mi Amigo { 
+Prices: Mini-$15 ,Small-$21 ,Medium-$29 ,Large-$35 ,X-Lrg-$39
+Sauce: Refried Beans, 
+       Pizza Sauce ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Hamburger,
+Onion,
+Jalapenos,
+Black Olives,
+Tomato,
+Shredded Lettuce;
+Gormet Toppings:
+Cheddar,
+Sour Cream,
+Salsa;
+}
+
+Midnight Snack { 
+Prices: Mini-$15 ,Small-$22 ,Medium-$29 ,Large-$35 ,X-Lrg-$40
+Sauce: Pizza Sauce  ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Pepperoni,
+Ham,
+Mushroom,
+Black Olives,
+Pinapple,
+Bacon Bits;
+Gormet Toppings:
+Extra Cheese;
+}
+
+Paisano { 
+Prices: Mini-$12 ,Small-$18 ,Medium-$26 ,Large-$32 ,X-Lrg-$37
+Sauce:Light Pizza Sauce  ;
+Cheese:Light Mozzerella Cheese  ;
+Basic Toppings:
+Fresh Garlic,
+Fresh Basli,
+Fresh Spinach,
+Plum Tomato;
+Gormet Toppings:
+Feta Cheese;
+Crust Modifier: Thin Crust
+}
+
+Pastrami Pizza { 
+Prices: Mini-$15 ,Small-$22 ,Medium-$29 ,Large-$35 ,X-Lrg-$40
+Sauce: Mustard ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Pepperoncini,
+Pickle;
+Gormet Toppings:
+Pastrami;
+}
+
+Veggie { 
+Prices: Mini-$12 ,Small-$18 ,Medium-$26 ,Large-$32 ,X-Lrg-$36
+Sauce: Pizza Sauce  ;
+Cheese: Mozzerella Cheese  ;
+Basic Toppings:
+Fresh or Roasted Garlic,
+Bell Pepper,
+Onion,
+Mushroom,
+Black Olives,
+Tomato;
+Gormet Toppings:
+ ;
+}
+
+Deli Sandwiches:
+
+Ham Sandwich{
+Condiments:
+Mayonaise,
+Mustard;
+Cheese:
+Sliced Mozzerella;
+Toppings:
+Ham,
+Sliced Tomato,
+Pickles,
+Shredded Lettuce,
+}
+
+Turkey Sandwich{
+Condiments:
+Mayonaise,
+Mustard;
+Cheese:
+Sliced Mozzerella;
+Toppings:
+Turkey,
+Sliced Tomato,
+Pickles,
+Shredded Lettuce,
+}
+
+Ham & Turkey Sandwich{
+Condiments:
+Mayonaise,
+Mustard;
+Cheese:
+Sliced Mozzerella;
+Toppings:
+ ,
+Sliced Tomato,
+Pickles,
+Shredded Lettuce,
+}
+
+Super Sub Sandwich{
+Condiments:
+Mayonaise,
+Mustard,
+Italian Dressing;
+Cheese:
+Sliced Mozzerella;
+Toppings:
+Pepperoni,
+Salami,
+Ham,
+Sliced Tomato,
+Pickles,
+Shredded Lettuce,
+}
+
+Hot Pastrami Sandwich{
+Condiments:
+Mayonaise,
+Mustard;
+Cheese:
+Sliced Mozzerella;
+Toppings:
+Pastrami
+Sliced Tomato,
+Pickles;
+}
+
+Hot Meatball Sandwich{
+Condiments:
+Marinara Sauce;
+Cheese:
+Mozzerella;
+Toppings:
+ ,
+Meatballs;
+}
+
+Hot Stuffed:
+
+Ham{
+Condiments:
+Mayonaise,
+Mustard;
+Cheese:
+Sliced Mozzerella;
+Toppings:
+Ham,
+Sliced Tomato,
+Pickles,
+Shredded Lettuce,
+}
+
+Turkey{
+Condiments:
+Mayonaise,
+Mustard;
+Cheese:
+Sliced Mozzerella;
+Toppings:
+Turkey,
+Sliced Tomato,
+Pickles,
+Shredded Lettuce,
+}
+
+Ham & Turkey{
+Condiments:
+Mayonaise,
+Mustard;
+Cheese:
+Sliced Mozzerella;
+Toppings:
+ ,
+Sliced Tomato,
+Pickles,
+Shredded Lettuce,
+}
+
+Super Sub{
+Condiments:
+Mayonaise,
+Mustard,
+Italian Dressing;
+Cheese:
+Sliced Mozzerella;
+Toppings:
+Pepperoni,
+Salami,
+Ham,
+Sliced Tomato,
+Pickles,
+Shredded Lettuce,
+}
+
+Hot Pastrami{
+Condiments:
+Mayonaise,
+Mustard;
+Cheese:
+Sliced Mozzerella;
+Toppings:
+Pastrami
+Sliced Tomato,
+Pickles;
+}
+
+
+Specailty Salads:
+
+Dinner Salad {
+Prices: Small-$9 ,Large-$14 ,Family-$25;
+Lettuce Type:
+Iceberg & Romaine Mix;
+Dressing:
+Choice of Dressing;
+Toppings:
+Cucumber,
+Grape Tomato,
+Pepperoncini,
+Couton
+}
+
+Ceaser Salad {
+Prices: Small-$9 ,Large-$14 ,Family-$25;
+Lettuce Type:
+Romaine Lettuce;
+Dressing:
+Ceaser Dressing (Tossed);
+Toppings:
+Shredded Parmesan,
+Croutons;
+}
+
+Chicken Ceaser Salad{
+Prices: Small-$10 ,Large-$15 ,Family-$32;
+Lettuce Type:
+Romaine Lettuce;
+Dressing:
+Ceaser Dressing (Tossed);
+Toppings:
+Chicken,
+Shredded Parmesan,
+Croutons;
+}
+
+Cranberry Walnut Salad{
+Prices: Small-$10 ,Large-$15 ,Family-$32;
+Lettuce Type:
+Mixed Greens;
+Dressing:
+Rasberry Vinegarette (Tossed);
+Toppings:
+Red Onion,
+Cranberries,
+Walnuts
+Feta Cheese;
+}
+
+Antipasto Salad{
+Prices: Small-$10 ,Large-$15 ,Family-$32;
+Lettuce Type:
+Iceberg & Romaine Mix;
+Dressing:
+Italian Dressing;
+Toppings:
+Red Onion,
+Black Olives,
+Grape Tomato;
+Pepperoncini,
+Mozzerella Cheese,
+Antipasto Spears;
+}
+
+House Salad{
+Prices: Small-$10 ,Large-$15 ,Family-$32;
+Lettuce Type:
+Iceberg & Romaine Mix;
+Dressing:
+Choice Of Dressing;
+Toppings:
+Cucumber,
+Red Onion,
+Tomato,
+Bacon Bits,
+Pepperoncini,
+Cheddar Cheese,
+Hard Boiled Egg,
+Croutons;
+}
+
+The Buddy Salad{
+Prices: Small-$10 ,Large-$15 ,Family-$32;
+Lettuce Type:
+Iceberg & Romaine Mix;
+Dressing:
+Choice Of Dressing;
+Toppings:
+Mushroom,
+Black Olives,
+Bacon Bits,
+Pinapple,
+Cranberries,
+Cheddar Cheese,
+Mozzerella Cheese,
+Hard Boiled Egg,
+Croutons;
+}
+
+Veggie Salad{
+Prices: Small-$10 ,Large-$15 ,Family-$32;
+Lettuce Type:
+Iceberg & Romaine Mix;
+Dressing:
+Choice Of Dressing;
+Toppings:
+Spinach,
+Black Olives,
+Onion,
+Green Bell Pepper,
+Mushroom,
+Tomato,
+Shredded Parmesan;
+}
+
+Side Salad{
+Prices: Side-$2.50
+Lettuce Type:
+Iceberg & Romaine Mix;
+Dressing:
+Choice Of Dressing;
+Toppings:
+Pepperoncini,
+Grape Tomato;
+}

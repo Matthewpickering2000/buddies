@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery - My Buddies Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Gallery/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <header>
+        <img src="Gallery/logo.webp" alt="My Buddies Pizza Logo" class="logo">
+        <img src="Gallery/list.png  " alt="Open Menu" class="menu-icon" onclick="openNav()" style="cursor:pointer; height:40px; width:40px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <!-- <li><a href="#specials">Specials</a></li> -->
+                <li><a href="/gallery.html">Photos</a></li>
+                <li><a href="/reservations.html">Party Packages</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="gallery">
+        <div class="galleryCat">
+            <button class="cat" data-filter="all">Show All</button>
+            <button class="cat" data-filter="food">Food & Drinks</button>
+            <button class="cat" data-filter="rest">Restaurant</button>
+        </div>
+        <div class="row">
+            
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/antipasto.png" alt="Food Image 1">
+                </div>
+            </div>
+
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/blt.png" alt="Food Image 2">
+                </div>
+            </div>
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/buddeq.png" alt="Food Image 3">
+                </div>
+            </div>
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/bwing.png" alt="Food Image 4">
+                </div>
+            </div>
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/wingcollect1.png" alt="Food Image 5">
+                </div>
+            </div>
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/coldsuper.png" alt="Food Image 6">
+                </div>
+            </div>
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/pcollect1.png" alt="Food Image 7">
+                </div>
+            </div>
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/pep.png" alt="Food Image 8">
+                </div>
+            </div>
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/pizza.png" alt="Food Image 9">
+                </div>
+            </div>
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/pizza2.png" alt="Food Image 10">
+                </div>
+            </div>
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/pizzacollect2.png" alt="Food Image 11">
+                </div>
+            </div>
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/pizzacollect3.png" alt="Food Image 12">
+                </div>
+            </div>
+
+            <div class="col food">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/food/pizzacollect4.png" alt="Food Image 13">
+                </div>
+            </div>
+
+            <div class="col rest">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/rest/front0.png" alt="rest Image 1">
+                </div>
+            </div>
+
+            <div class="col rest">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/rest/front1.png" alt="rest Image 2">
+                </div>
+            </div>
+
+            <div class="col rest">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/rest/front2.png" alt="rest Image 3">
+                </div>
+            </div>
+
+            <div class="col rest">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/rest/front3.png" alt="rest Image 4">
+                </div>
+            </div>
+
+            <div class="col rest">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/rest/games1.png" alt="rest Image 5">
+                </div>
+            </div>
+
+            <div class="col rest">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/rest/prtyrm.png" alt="rest Image 6">
+                </div>
+            </div>
+
+            <div class="col rest">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/rest/strtbl.png" alt="rest Image 7">
+                </div>
+            </div>
+
+            <div class="col rest">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/rest/tap.png" alt="rest Image 8">
+                </div>
+            </div>
+
+            <div class="col rest">
+                <div class="gallery-img">
+                    <img src="Gallery/expanded/rest/tckts.png" alt="rest Image 9">
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </section>
+
+    <!-- Slideshow Modal Structure -->
+    <div id="slideshow" class="slide-overlay">
+        <span class="close-slideshow">&times;</span>
+        <div class="slideshow-container">
+            <a class="prev">&#10094;</a>
+            <div class="slide">
+                <div class="slide-number"></div>
+                <img class="slideshow-img" id="slideshowImage" alt="Enlarged gallery image">
+            </div>
+            <a class="next">&#10095;</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/MyBuddiesPizza/#" target="_blank">
+                <img src="Gallery/facebook.png" class="social-icon" alt="Facebook Icon">
+                <!-- Icon by Freepik -->
+
+            </a>
+            <a href="https://www.instagram.com/mybuddiespizza" target="_blank">
+                <img src="Gallery/instagram.png" class="social-icon" alt="Instagram Icon">
+                <!-- Icon by Freepik -->
+            </a>
+            <a href="https://www.x.com/mbpizza1" target="_blank">
+                <img src="Gallery/twitter.png"class="social-icon" alt="Twitter Icon">
+                <!-- Icon by Freepik -->
+            </a>
+            <a href="https://www.yelp.com/biz/my-buddies-pizza-lake-elsinore?osq=my+buddies+pizza" target="_blank">
+                <img src="Gallery/yelp.png" class="social-icon" alt="Yelp Icon">
+                <!-- Icon by Freepik -->
+            </a>
+        </div>
+        <br>
+        <p>&copy; 2023 My Buddies Pizza. All rights reserved.</p>
+        <p>Website redesigned by Matthew Pickering</p>
+    </footer>
+<script src="app.js"></script>
+</body>
+</html>

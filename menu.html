@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu - My Buddies Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Gallery/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+    <header>
+        <img src="Gallery/logo.webp" alt="My Buddies Pizza Logo" class="logo">
+        <img src="Gallery/list.png  " alt="Open Menu" class="menu-icon" onclick="openNav()" style="cursor:pointer; height:40px; width:40px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <!-- <li><a href="#specials">Specials</a></li> -->
+                <li><a href="/gallery.html">Photos</a></li>
+                <li><a href="/reservations.html">Party Packages</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="menu">
+
+         <div class="menuCat">
+            <button class="cat active" data-filter="starters">Starters</button>
+            <button class="cat" data-filter="salads">Salads</button>
+            <button class="cat" data-filter="pizzas">Pizzas</button>
+            <button class="cat" data-filter="pastas">Pastas</button>
+            <button class="cat" data-filter="sandwiches">Sandwiches</button>
+            <button class="cat" data-filter="hotstuffed">Hot Stuffed</button>
+            <button class="cat" data-filter="calzones">Calzones</button>
+            <button class="cat" data-filter="kidsmeals">Kids Meals</button>
+            <button class="cat" data-filter="wings">Wings</button>
+            <button class="cat" data-filter="desserts">Desserts</button>
+        </div>
+        <div class="row">
+            
+            
+            <div id="starters-container" class="col-container starters ">
+            
+            </div>  
+
+
+
+            <div id="salads-container" class="col-container salads ">
+                <div class="col salads">
+                    <div class="menu-item">
+                        
+                </div>
+            </div>
+
+
+
+            <div id="pizzas-container" class="col-container pizzas active">
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/Cheese.png" alt="Build Your Own Pizza">
+                    <div class="card-content">
+                        <h3>Build Your Own</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-b-y-o-p-mini" name="b-y-o-p-size" value="mini" data-price="" checked>
+                                <label for="size-b-y-o-p-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-b-y-o-p-small" name="b-y-o-p-size" value="small" data-price="">
+                                <label for="size-b-y-o-p-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-b-y-o-p-medium" name="b-y-o-p-size" value="medium" data-price="">
+                                <label for="size-b-y-o-p-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-b-y-o-p-large" name="b-y-o-p-size" value="large" data-price="">
+                                <label for="size-b-y-o-p-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-b-y-o-p-xlarge" name="b-y-o-p-size" value="xlarge" data-price="">
+                                <label for="size-b-y-o-p-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Build Your Own')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Build Your Own', getSelectedSize('b-y-o-p-size'), getSelectedIngredients('Build Your Own'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/BestBuddy.png" alt="Best Buddy Pizza">
+                    <div class="card-content">
+                        <h3>Best Buddy</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-best-buddy-mini" name="best-buddy-size" value="mini" data-price="" checked>
+                                <label for="size-best-buddy-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-best-buddy-small" name="best-buddy-size" value="small" data-price="">
+                                <label for="size-best-buddy-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-best-buddy-medium" name="best-buddy-size" value="medium" data-price="">
+                                <label for="size-best-buddy-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-best-buddy-large" name="best-buddy-size" value="large" data-price="">
+                                <label for="size-best-buddy-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-best-buddy-xlarge" name="best-buddy-size" value="xlarge" data-price="">
+                                <label for="size-best-buddy-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Best Buddy')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Best Buddy', getSelectedSize('best-buddy-size'), getSelectedIngredients('Best Buddy'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/blt.png" alt="B.L.T. Pizza">
+                    <div class="card-content">
+                        <h3>B.L.T. Pizza</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-b-l-t-mini" name="b-l-t-size" value="mini" data-price="" checked>
+                                <label for="size-b-l-t-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-b-l-t-small" name="b-l-t-size" value="small" data-price="">
+                                <label for="size-b-l-t-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-b-l-t-medium" name="b-l-t-size" value="medium" data-price="">
+                                <label for="size-b-l-t-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-b-l-t-large" name="b-l-t-size" value="large" data-price="">
+                                <label for="size-b-l-t-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-b-l-t-xlarge" name="b-l-t-size" value="xlarge" data-price="">
+                                <label for="size-b-l-t-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('B.L.T.')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('B.L.T.', getSelectedSize('b-l-t-size'), getSelectedIngredients('B.L.T.'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/buddeq.png" alt="Bud-E-Que Pizza">
+                    <div class="card-content">
+                        <h3>Bud-E-Que</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-bud-e-que-mini" name="bud-e-que-size" value="mini" data-price="" checked>
+                                <label for="size-bud-e-que-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-bud-e-que-small" name="bud-e-que-size" value="small" data-price="">
+                                <label for="size-bud-e-que-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-bud-e-que-medium" name="bud-e-que-size" value="medium" data-price="">
+                                <label for="size-bud-e-que-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-bud-e-que-large" name="bud-e-que-size" value="large" data-price="">
+                                <label for="size-bud-e-que-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-bud-e-que-xlarge" name="bud-e-que-size" value="xlarge" data-price="">
+                                <label for="size-bud-e-que-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Bud-E-Que')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Bud-E-Que', getSelectedSize('bud-e-que-size'), getSelectedIngredients('Bud-E-Que'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/buddydelmar.png" alt="Buddy Del Mar Pizza">
+                    <div class="card-content">
+                        <h3>Buddy Del Mar</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-buddy-del-mar-mini" name="buddy-del-mar-size" value="mini" data-price="" checked>
+                                <label for="size-buddy-del-mar-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-buddy-del-mar-small" name="buddy-del-mar-size" value="small" data-price="">
+                                <label for="size-buddy-del-mar-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-buddy-del-mar-medium" name="buddy-del-mar-size" value="medium" data-price="">
+                                <label for="size-buddy-del-mar-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-buddy-del-mar-large" name="buddy-del-mar-size" value="large" data-price="">
+                                <label for="size-buddy-del-mar-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-buddy-del-mar-xlarge" name="buddy-del-mar-size" value="xlarge" data-price="">
+                                <label for="size-buddy-del-mar-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Buddy Del Mar')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Buddy Del Mar', getSelectedSize('buddy-del-mar-size'), getSelectedIngredients('Buddy Del Mar'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/buffalobuddy.png" alt="Buffalo Buddy Pizza">
+                    <div class="card-content">
+                        <h3>Buffalo Buddy</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-buffalo-buddy-mini" name="buffalo-buddy-size" value="mini" data-price="" checked>
+                                <label for="size-buffalo-buddy-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-buffalo-buddy-small" name="buffalo-buddy-size" value="small" data-price="">
+                                <label for="size-buffalo-buddy-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-buffalo-buddy-medium" name="buffalo-buddy-size" value="medium" data-price="">
+                                <label for="size-buffalo-buddy-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-buffalo-buddy-large" name="buffalo-buddy-size" value="large" data-price="">
+                                <label for="size-buffalo-buddy-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-buffalo-buddy-xlarge" name="buffalo-buddy-size" value="xlarge" data-price="">
+                                <label for="size-buffalo-buddy-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Buffalo Buddy')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Buffalo Buddy', getSelectedSize('buffalo-buddy-size'), getSelectedIngredients('Buffalo Buddy'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/butcherblock.png" alt="Butcher Block Pizza">
+                    <div class="card-content">
+                        <h3>Butcher Block</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-butcher-block-mini" name="butcher-block-size" value="mini" data-price="" checked>
+                                <label for="size-butcher-block-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-butcher-block-small" name="butcher-block-size" value="small" data-price="">
+                                <label for="size-butcher-block-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-butcher-block-medium" name="butcher-block-size" value="medium" data-price="">
+                                <label for="size-butcher-block-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-butcher-block-large" name="butcher-block-size" value="large" data-price="">
+                                <label for="size-butcher-block-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-butcher-block-xlarge" name="butcher-block-size" value="xlarge" data-price="">
+                                <label for="size-butcher-block-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Butcher Block')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Butcher Block', getSelectedSize('butcher-block-size'), getSelectedIngredients('Butcher Block'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/chickenparmesan.png" alt="Chicken Parmesan Pizza">
+                    <div class="card-content">
+                        <h3>Chicken Parmesan</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-chicken-parmesan-mini" name="chicken-parmesan-size" value="mini" data-price="" checked>
+                                <label for="size-chicken-parmesan-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-chicken-parmesan-small" name="chicken-parmesan-size" value="small" data-price="">
+                                <label for="size-chicken-parmesan-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-chicken-parmesan-medium" name="chicken-parmesan-size" value="medium" data-price="">
+                                <label for="size-chicken-parmesan-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-chicken-parmesan-large" name="chicken-parmesan-size" value="large" data-price="">
+                                <label for="size-chicken-parmesan-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-chicken-parmesan-xlarge" name="chicken-parmesan-size" value="xlarge" data-price="">
+                                <label for="size-chicken-parmesan-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Chicken Parmesan')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Chicken Parmesan', getSelectedSize('chicken-parmesan-size'), getSelectedIngredients('Chicken Parmesan'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/everything.png" alt="The Everything Pizza">
+                    <div class="card-content">
+                        <h3>The Everything</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-the-everything-mini" name="the-everything-size" value="mini" data-price="" checked>
+                                <label for="size-the-everything-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-the-everything-small" name="the-everything-size" value="small" data-price="">
+                                <label for="size-the-everything-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-the-everything-medium" name="the-everything-size" value="medium" data-price="">
+                                <label for="size-the-everything-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-the-everything-large" name="the-everything-size" value="large" data-price="">
+                                <label for="size-the-everything-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-the-everything-xlarge" name="the-everything-size" value="xlarge" data-price="">
+                                <label for="size-the-everything-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('The Everything')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('The Everything', getSelectedSize('the-everything-size'), getSelectedIngredients('The Everything'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/fivecheese.png" alt="Five Cheese Pizza">
+                    <div class="card-content">
+                        <h3>Five Cheese</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-five-cheese-mini" name="five-cheese-size" value="mini" data-price="" checked>
+                                <label for="size-five-cheese-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-five-cheese-small" name="five-cheese-size" value="small" data-price="">
+                                <label for="size-five-cheese-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-five-cheese-medium" name="five-cheese-size" value="medium" data-price="">
+                                <label for="size-five-cheese-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-five-cheese-large" name="five-cheese-size" value="large" data-price="">
+                                <label for="size-five-cheese-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-five-cheese-xlarge" name="five-cheese-size" value="xlarge" data-price="">
+                                <label for="size-five-cheese-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Five Cheese')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Five Cheese', getSelectedSize('five-cheese-size'), getSelectedIngredients('Five Cheese'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/miamigo.png" alt="Mi Amigo Pizza">
+                    <div class="card-content">
+                        <h3>Mi Amigo</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-mi-amigo-mini" name="mi-amigo-size" value="mini" data-price="" checked>
+                                <label for="size-mi-amigo-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-mi-amigo-small" name="mi-amigo-size" value="small" data-price="">
+                                <label for="size-mi-amigo-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-mi-amigo-medium" name="mi-amigo-size" value="medium" data-price="">
+                                <label for="size-mi-amigo-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-mi-amigo-large" name="mi-amigo-size" value="large" data-price="">
+                                <label for="size-mi-amigo-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-mi-amigo-xlarge" name="mi-amigo-size" value="xlarge" data-price="">
+                                <label for="size-mi-amigo-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Mi Amigo')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Mi Amigo', getSelectedSize('mi-amigo-size'), getSelectedIngredients('Mi Amigo'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/midnightsnack.png" alt="Midnight Snack Pizza">
+                    <div class="card-content">
+                        <h3>Midnight Snack</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-midnight-snack-mini" name="midnight-snack-size" value="mini" data-price="" checked>
+                                <label for="size-midnight-snack-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-midnight-snack-small" name="midnight-snack-size" value="small" data-price="">
+                                <label for="size-midnight-snack-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-midnight-snack-medium" name="midnight-snack-size" value="medium" data-price="">
+                                <label for="size-midnight-snack-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-midnight-snack-large" name="midnight-snack-size" value="large" data-price="">
+                                <label for="size-midnight-snack-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-midnight-snack-xlarge" name="midnight-snack-size" value="xlarge" data-price="">
+                                <label for="size-midnight-snack-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Midnight Snack')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Midnight Snack', getSelectedSize('midnight-snack-size'), getSelectedIngredients('Midnight Snack'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/Paisano.png" alt="Paisano Pizza">
+                    <div class="card-content">
+                        <h3>Paisano</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-paisano-mini" name="paisano-size" value="mini" data-price="" checked>
+                                <label for="size-paisano-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-paisano-small" name="paisano-size" value="small" data-price="">
+                                <label for="size-paisano-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-paisano-medium" name="paisano-size" value="medium" data-price="">
+                                <label for="size-paisano-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-paisano-large" name="paisano-size" value="large" data-price="">
+                                <label for="size-paisano-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-paisano-xlarge" name="paisano-size" value="xlarge" data-price="">
+                                <label for="size-paisano-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Paisano')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Paisano', getSelectedSize('paisano-size'), getSelectedIngredients('Paisano'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/Pastrami.png" alt="Pastrami Pizza">
+                    <div class="card-content">
+                        <h3>Pastrami Pizza</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-pastrami-mini" name="pastrami-size" value="mini" data-price="" checked>
+                                <label for="size-pastrami-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-pastrami-small" name="pastrami-size" value="small" data-price="">
+                                <label for="size-pastrami-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-pastrami-medium" name="pastrami-size" value="medium" data-price="">
+                                <label for="size-pastrami-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-pastrami-large" name="pastrami-size" value="large" data-price="">
+                                <label for="size-pastrami-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-pastrami-xlarge" name="pastrami-size" value="xlarge" data-price="">
+                                <label for="size-pastrami-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Pastrami')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Pastrami', getSelectedSize('pastrami-size'), getSelectedIngredients('Pastrami'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col pizzas">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/Veggie.png" alt="Veggie Pizza">
+                    <div class="card-content">
+                        <h3>Veggie Pizza</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-veggie-mini" name="veggie-size" value="mini" data-price="" checked>
+                                <label for="size-veggie-mini">
+                                    <img src="Gallery/sizes/Mini.png" alt="Mini size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">8"</span>
+                                        <span class="size-name">Mini</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-veggie-small" name="veggie-size" value="small" data-price="">
+                                <label for="size-veggie-small">
+                                    <img src="Gallery/sizes/Small.png" alt="Small size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">10"</span>
+                                        <span class="size-name">Small</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-veggie-medium" name="veggie-size" value="medium" data-price="">
+                                <label for="size-veggie-medium">
+                                    <img src="Gallery/sizes/Medium.png" alt="Medium size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">12"</span>
+                                        <span class="size-name">Medium</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-veggie-large" name="veggie-size" value="large" data-price="">
+                                <label for="size-veggie-large">
+                                    <img src="Gallery/sizes/Large.png" alt="Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">14"</span>
+                                        <span class="size-name">Large</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="size-veggie-xlarge" name="veggie-size" value="xlarge" data-price="">
+                                <label for="size-veggie-xlarge">
+                                    <img src="Gallery/sizes/XL.png" alt="X-Large size" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-inch">16"</span>
+                                        <span class="size-name">X-Lrg</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="customize-btn" onclick="toggleCustomOptions('Veggie')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Veggie', getSelectedSize('veggie-size'), getSelectedIngredients('Veggie'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col wings">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/Bone-in.png" alt="Bone In Wings">
+                    <div class="card-content">
+                        <h3>Bone In Wings</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-bone-in-wings" name="bone-in-size" value="8 pieces" data-price="" checked>
+                                <label for="size-bone-in-mini">
+                                    <img src="Gallery/sizes/BI8.png" alt="8 pieces" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-name">8 pcs</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                                <input type="radio" id="size-bone-in-wings" name="bone-in-size" value="16 pieces" data-price="" >
+                                <label for="size-bone-in-medium">
+                                    <img src="Gallery/sizes/BI16.png" alt="16 pieces" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-name">16 pcs</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                                <input type="radio" id="size-bone-in-wings" name="bone-in-size" value="25 pieces" data-price="" >
+                                <label for="size-bone-in-large">
+                                    <img src="Gallery/sizes/BI25.png" alt="25 pieces" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-name">25 pcs</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                                
+                            <button class="customize-btn" onclick="toggleCustomOptions('Bone In Wings')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Bone In Wings', getSelectedSize('bone-in-size'), getSelectedIngredients('Bone In Wings'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                <div class="col wings">
+                <div class="menu-item">
+                    <img src="Gallery/expanded/food/Boneless.png" alt="Boneless Wings">
+                    <div class="card-content">
+                        <h3>Boneless Wings</h3>
+                        <div class="card-details-wrapper">
+                            <h4>Select Size:</h4>
+                            <div class="sizes">
+                                <input type="radio" id="size-boneless-wings" name="boneless-size" value="8 pieces" data-price="" checked>
+                                <label for="size-boneless-mini">
+                                    <img src="Gallery/sizes/BI8.png" alt="8 pieces" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-name">8 pcs</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                                <input type="radio" id="size-boneless-wings" name="boneless-size" value="16 pieces" data-price="" >
+                                <label for="size-boneless-medium">
+                                    <img src="Gallery/sizes/BI16.png" alt="16 pieces" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-name">16 pcs</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                                <input type="radio" id="size-boneless-wings" name="boneless-size" value="25 pieces" data-price="" >
+                                <label for="size-boneless-large">
+                                    <img src="Gallery/sizes/BI25.png" alt="25 pieces" class="sizeImg">
+                                    <div class="size-details">
+                                        <span class="size-name">25 pcs</span>
+                                        <span class="size-price"></span>
+                                    </div>
+                                </label>
+                                
+                            <button class="customize-btn" onclick="toggleCustomOptions('Boneless Wings')">Customize</button>
+                            <div class="custom-options-container"></div>
+                            <button class="order-btn" onclick="addToOrder('Boneless Wings', getSelectedSize('boneless-size'), getSelectedIngredients('Boneless Wings'))">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div id="pastas-container" class="col-container pastas ">
+
+        </div>
+
+
+        <div id="sandwiches-container" class="col-container sandwiches ">
+
+        </div>
+
+
+        <div id="hotstuffed-container" class="col-container hotstuffed ">
+
+        </div>
+
+
+        <div id="calzones-container" class="col-container calzones ">
+
+        </div>
+
+
+        <div id="kids-meals-container" class="col-container kids-meals ">
+
+        </div>
+
+
+        <div id="wings-container" class="col-container wings ">
+            
+        </div>
+
+
+        <div id="desserts-container" class="col-container desserts ">
+
+        </div>
+
+
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/MyBuddiesPizza/#" target="_blank">
+                <img src="Gallery/facebook.png" class="social-icon" alt="Facebook Icon">
+                <!-- Icon by Freepik -->
+
+            </a>
+            <a href="https://www.instagram.com/mybuddiespizza" target="_blank">
+                <img src="Gallery/instagram.png" class="social-icon" alt="Instagram Icon">
+                <!-- Icon by Freepik -->
+            </a>
+            <a href="https://www.x.com/mbpizza1" target="_blank">
+                <img src="Gallery/twitter.png"class="social-icon" alt="Twitter Icon">
+                <!-- Icon by Freepik -->
+            </a>
+            <a href="https://www.yelp.com/biz/my-buddies-pizza-lake-elsinore?osq=my+buddies+pizza" target="_blank">
+                <img src="Gallery/yelp.png" class="social-icon" alt="Yelp Icon">
+                <!-- Icon by Freepik -->
+            </a>
+        </div>
+        <br>
+        <p>&copy; 2023 My Buddies Pizza. All rights reserved.</p>
+        <p>Website redesigned by Matthew Pickering</p>
+    </footer>
+<script src="app.js"></script>
+<script src="menu.js"></script>
+</body>
+</html>
